@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sakthivel's Portfolio - Showcasing skills, projects, and experience in software development.">
+    <meta name="keywords"
+        content="Sakthivel, Portfolio, Software Developer, Web Development, Projects, Skills, Contact">
+    <meta name="author" content="Sakthivel.P">
+    <meta property="og:title" content="Sakthivel's Portfolio">
+    <meta property="og:description"
+        content="Explore Sakthivel's skills, projects, and experience in software development.">
+    <meta property="og:image" content="./icon2.png">
+    <meta property="og:url" content="https://sakthivel-portfolio.com">
+    <title>Sakthivel_Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./icon2.png">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- EmailJS library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("A-Dlrckz5MtZsaWFl");
+        })();
+    </script>
+
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-spinner"></div>
+        <p>Loading...</p>
+    </div>
+
+    <!-- 3D Canvas Background -->
+    <canvas id="canvas3d"></canvas>
+
+    <header class="site-header">
+        <nav class="nav container">
+            <div class="brand">
+                <span class="content">
+                    <img class="logo" src="./icon2.png" alt="Portfolio-Icon">
+                    <span class="sub">PortFolio</span>
+                </span>
+            </div>
+            <ul class="nav-links" id="navlinks">
+                <li><a href="#home" class="navlink">Home</a></li>
+                <li><a href="#about" class="navlink">About</a></li>
+                <li><a href="#skills" class="navlink">Skills</a></li>
+                <li><a href="#projects" class="navlink">Projects</a></li>
+                <li><a href="#contact" class="navlink">Contact</a></li>
+            </ul>
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+        <span class="sun" title="Light Mode">☀️</span>
+        <span class="moon" title="Dark Mode">🌙</span>
+        <div class="toggle-ball"></div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container" id="home">
+            <div class="hero-content">
+                <h1 class="typing neon">Sakthivel.P — Developer</h1>
+                <p class="lead">I'm a motivated fresher — Software Developer with a strong foundation in web development
+                    and
+                    programming concepts. Passionate about learning new technologies, I focus on writing clean code and
+                    building responsive applications while continuously improving my technical and problem-solving
+                    skills.
+                </p>
+                <div class="cta-row">
+                    <a class="btn neon-btn" href="./Sakthivel_MCA_2024_Resume -developer.pdf" target="_blank">Download Resume</a>
+                    <a class="btn ghost" href="#projects">View Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about container">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="tabs">
+                <input type="radio" id="tab-experience" name="tabs" checked aria-controls="experience">
+                <label class="tab-label" for="tab-experience">Experience</label>
+
+                <input type="radio" id="tab-degree" name="tabs" aria-controls="degree">
+                <label class="tab-label" for="tab-degree">Degree</label>
+
+                <input type="radio" id="tab-school" name="tabs" aria-controls="school">
+                <label class="tab-label" for="tab-school">Education</label>
+
+                <div class="panes">
+                    <div id="experience" class="tab-pane active">
+                        <div>
+                            <h3>Web Application Intern | Magic Bus Foundation - Chennai.</h3>
+                            <strong>Period: Jan 2026 - Mar 2026</strong>
+                            <p>
+                                <em style="color: var(--accent3)">☼</em> Built responsive, high-performance UIs using
+                                React JS, HTML, and CSS.
+                            </p>
+                            <p>
+                                <em style="color: var(--accent3)">☼</em> Developed interactive components and managed
+                                complex state logic with JavaScript.
+                            </p>
+                            <p>
+                                <em style="color: var(--accent3)">☼</em> Managed collaborative workflows and code
+                                integrity using Git and GitHub.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>MIS Executive | E &amp; T Communication - Chennai-600088.</h3>
+                            <strong>Period: Jun 2023 - Nov 2024</strong>
+                            <p>
+                                <em style="color: var(--accent3)">☼</em> Managed data operations as an MIS Executive,
+                                utilizing Excel and Word to generate invoices, prepare reports, and maintain accurate
+                                records.
+                            </p>
+                            <p>
+                                <em style="color: var(--accent3)">☼</em> Managed email communication with clients and
+                                internal teams to ensure smooth operations.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="degree" class="tab-pane">
+                        <h3>Master of Computer Application (MCA)</h3>
+                        <strong>Period: 2022 - 2024</strong>
+                        <p><em style="color: var(--accent3)">☼</em> I learned advanced programming concepts, database
+                            management, and software engineering principles during my MCA studies.</p>
+
+                        <h3>Bachelor of Computer Science (BCS)</h3>
+                        <strong>Period: 2019 - 2022</strong>
+                        <p><em style="color: var(--accent3)">☼</em> I gained foundational knowledge in programming, data
+                            structures, and computer systems during my BCS studies.</p>
+                    </div>
+
+                    <div id="school" class="tab-pane">
+                        <h3>R.C.M Higher Secondary School</h3>
+
+                        <div class="education-item">
+                            <strong>Higher Secondary Education</strong>
+                            <p>Period: 2018 - 2019</p>
+                            <p><em style="color: var(--accent3)">☼</em> Completed secondary education with a focus on
+                                science subjects, which provided a strong foundation in mathematics and analytical
+                                thinking.</p>
+                        </div>
+
+                        <div class="education-item">
+                            <strong>Secondary Education</strong>
+                            <p>Period: 2016 - 2017</p>
+                            <p><em style="color: var(--accent3)">☼</em> Completed Secondary Education with a focus on
+                                science subjects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon neon-icon">⚡</div>
+                        <h3>Frontend</h3>
+                        <p>HTML, CSS, JavaScript, React.js</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon neon-icon">🔧</div>
+                        <h3>Backend</h3>
+                        <p>Java, Spring Boot, MySQL</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon neon-icon">🎨</div>
+                        <h3>Design</h3>
+                        <p>Figma, Adobe XD, Photoshop</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon neon-icon">🚀</div>
+                        <h3>Version Control</h3>
+                        <p>GitHub, Git</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>Vendor Billing Portal</h3>
+                            <p class="project-description">Full-stack vendor management system with invoice tracking</p>
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">React.js</span>
+                                <span class="tag">MySQL</span>
+                            </div>
+                            <a href="#" class="neon-button-small" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>Cake Bakery Website</h3>
+                            <p class="project-description">Interactive e-commerce platform for bakery products</p>
+                            <div class="project-tags">
+                                <span class="tag">React.js</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <a href="#" class="neon-button-small" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p class="project-description">Modern portfolio with 3D animations and neon effects</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">Three.js</span>
+                            </div>
+                            <a href="#" class="neon-button-small" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card explore-more">
+                        <div class="project-content">
+                            <h3>Explore More Projects</h3>
+                            <p class="project-description">Check out my GitHub for more projects</p>
+                            <a href="https://github.com" class="neon-button-small" target="_blank">View GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+
+                <div class="faq">
+                    <div class="faq-item">
+                        <input type="checkbox" id="q1">
+                        <label for="q1" class="faq-question">
+                            What technologies do you use?
+                            <span class="icon"></span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                I primarily work with HTML, CSS, JavaScript, and React for frontend
+                                development. I also have foundational knowledge in Java, SQL, and Git
+                                for backend logic and version control.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <input type="checkbox" id="q2">
+                        <label for="q2" class="faq-question">
+                            Are you open to relocation?
+                            <span class="icon"></span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, I am open to relocation and excited about opportunities that
+                                allow me to grow professionally while contributing effectively to a team.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <input type="checkbox" id="q3">
+                        <label for="q3" class="faq-question">
+                            Do you work on freelance projects?
+                            <span class="icon"></span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                Yes, I am open to freelance and collaborative projects where I can
+                                apply my frontend development skills and gain real-world experience.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <input type="checkbox" id="q4">
+                        <label for="q4" class="faq-question">
+                            What type of role are you seeking?
+                            <span class="icon"></span>
+                        </label>
+                        <div class="faq-answer">
+                            <p>
+                                I am currently seeking an entry-level Frontend or Full Stack Developer
+                                role where I can apply my skills, learn from experienced developers,
+                                and contribute to meaningful projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+
+                <div class="contact-grid">
+                    <!-- Contact Details -->
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <span class="contact-icon">👤</span>
+                            <div>
+                                <strong>Name</strong>
+                                <p>Sakthivel.P</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p>sakthi271602@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="contact-icon">📱</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+91 9360324911</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <strong>Location</strong>
+                                <p>Chennai, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form">
+                        <form id="contact-data">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="tel" name="phone" placeholder="Your Phone" required>
+                            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+                            <button type="submit" id="sendBtn">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps?q=Chennai&output=embed" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>© 2024 Sakthivel P — Portfolio</div>
+            <div class="credits">Designed with passion • Full Stack Developer</div>
+        </div>
+    </footer>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script>
+        // Loader
+        window.addEventListener("load", () => {
+            document.getElementById("loader").style.display = "none";
+        });
+
+        // Hamburger Menu
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("navlinks");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.navlink').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("active");
+            });
+        });
+
+        // Active Navigation
+        window.addEventListener("scroll", () => {
+            const navLinksItems = document.querySelectorAll(".navlink");
+            const scrollPosition = window.scrollY + 100;
+
+            navLinksItems.forEach(link => {
+                const section = document.querySelector(link.getAttribute("href"));
+                if (section) {
+                    if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+                        link.classList.add("active");
+                    } else {
+                        link.classList.remove("active");
+                    }
+                }
+            });
+        });
+
+        // Theme Toggle
+        const toggle = document.getElementById("themeToggle");
+
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            if (document.body.classList.contains("light-mode")) {
+                localStorage.setItem("theme", "light");
+            } else {
+                localStorage.setItem("theme", "dark");
+            }
+        });
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light") {
+            document.body.classList.add("light-mode");
+        }
+
+        // EmailJS
+        const form = document.getElementById("contact-data");
+        const btn = document.getElementById("sendBtn");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            btn.disabled = true;
+            btn.innerText = "Sending...";
+
+            emailjs.sendForm("service_pngmi96", "template_m0c7kvx", form)
+                .then(function () {
+                    alert("✅ Message sent successfully!");
+                    form.reset();
+                    btn.disabled = false;
+                    btn.innerText = "Send Message";
+                })
+                .catch(function (error) {
+                    console.error(error);
+                    alert("❌ Failed to send message.");
+                    btn.disabled = false;
+                    btn.innerText = "Send Message";
+                });
+        });
+
+        // Tab functionality
+        const tabInputs = document.querySelectorAll('.tabs input[type="radio"]');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabInputs.forEach(input => {
+            input.addEventListener('change', function () {
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                const targetPane = document.getElementById(this.getAttribute('aria-controls'));
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
+        });
+
+        // 3D Animation with Three.js
+        let scene, camera, renderer, codeObjects = [];
+        let mouseX = 0, mouseY = 0;
+        let scrollY = 0;
+
+        function init3D() {
+            const canvas = document.getElementById('canvas3d');
+            scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 30;
+
+            renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            // Create coding objects
+            createCodeSymbols();
+
+            // Lighting
+            const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+            scene.add(ambientLight);
+
+            const pointLight1 = new THREE.PointLight(0x00f0ff, 1);
+            pointLight1.position.set(10, 10, 10);
+            scene.add(pointLight1);
+
+            const pointLight2 = new THREE.PointLight(0xff00ff, 1);
+            pointLight2.position.set(-10, -10, 10);
+            scene.add(pointLight2);
+
+            // Mouse movement
+            document.addEventListener('mousemove', onMouseMove);
+
+            // Scroll effect
+            window.addEventListener('scroll', () => {
+                scrollY = window.scrollY;
+            });
+
+            window.addEventListener('resize', onWindowResize);
+
+            animate3D();
+        }
+
+        function createCodeSymbols() {
+            const symbols = ['<', '>', '{', '}', '(', ')', '[', ']', ';', '/', '*', '+', '='];
+            const geometries = [
+                new THREE.BoxGeometry(1, 1, 1),
+                new THREE.TetrahedronGeometry(0.8),
+                new THREE.OctahedronGeometry(0.7),
+                new THREE.TorusGeometry(0.5, 0.2, 16, 100)
+            ];
+
+            // Reduced to 20 objects (was 50)
+            for (let i = 0; i < 20; i++) {
+                const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+                const material = new THREE.MeshStandardMaterial({
+                    color: Math.random() > 0.5 ? 0x00f0ff : 0xff00ff,
+                    emissive: Math.random() > 0.5 ? 0x00f0ff : 0xff00ff,
+                    emissiveIntensity: 0.3, // Reduced from 0.5
+                    wireframe: Math.random() > 0.5,
+                    transparent: true,
+                    opacity: 0.5 // Reduced from 0.7
+                });
+
+                const mesh = new THREE.Mesh(geometry, material);
+                mesh.position.set(
+                    (Math.random() - 0.5) * 60,
+                    (Math.random() - 0.5) * 60,
+                    (Math.random() - 0.5) * 40
+                );
+
+                mesh.rotation.set(
+                    Math.random() * Math.PI,
+                    Math.random() * Math.PI,
+                    Math.random() * Math.PI
+                );
+
+                mesh.userData = {
+                    speedX: (Math.random() - 0.5) * 0.01, // Slower
+                    speedY: (Math.random() - 0.5) * 0.01,
+                    speedZ: (Math.random() - 0.5) * 0.005,
+                    initialX: mesh.position.x,
+                    initialY: mesh.position.y,
+                    initialZ: mesh.position.z
+                };
+
+                scene.add(mesh);
+                codeObjects.push(mesh);
+            }
+
+            // Reduced particle count to 500 (was 2000)
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 500;
+            const positions = new Float32Array(particlesCount * 3);
+            const colors = new Float32Array(particlesCount * 3);
+
+            for (let i = 0; i < particlesCount * 3; i += 3) {
+                positions[i] = (Math.random() - 0.5) * 100;
+                positions[i + 1] = (Math.random() - 0.5) * 100;
+                positions[i + 2] = (Math.random() - 0.5) * 100;
+
+                const color = new THREE.Color(Math.random() > 0.5 ? 0x00f0ff : 0xff00ff);
+                colors[i] = color.r;
+                colors[i + 1] = color.g;
+                colors[i + 2] = color.b;
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.08, // Smaller size (was 0.1)
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.4, // More transparent (was 0.6)
+                blending: THREE.AdditiveBlending
+            });
+
+            const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particles);
+            codeObjects.push(particles);
+        }
+
+        function onMouseMove(event) {
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+
+        function animate3D() {
+            requestAnimationFrame(animate3D);
+
+            // Parallax based on scroll
+            const scrollFactor = scrollY * 0.001;
+
+            codeObjects.forEach((obj, index) => {
+                if (obj.geometry.type === 'BufferGeometry') {
+                    // Particles - slow rotation and scroll effect
+                    obj.rotation.y += 0.0005;
+                    obj.position.y = Math.sin(scrollFactor + index * 0.1) * 2;
+                } else {
+                    // 3D objects - smooth rotation
+                    obj.rotation.x += obj.userData.speedX;
+                    obj.rotation.y += obj.userData.speedY;
+                    obj.rotation.z += obj.userData.speedZ;
+
+                    // Interactive: objects react to mouse movement
+                    const targetX = obj.userData.initialX + mouseX * 3;
+                    const targetY = obj.userData.initialY + mouseY * 3;
+
+                    obj.position.x += (targetX - obj.position.x) * 0.02;
+                    obj.position.y += (targetY - obj.position.y) * 0.02;
+
+                    // Scroll parallax for depth
+                    obj.position.z = obj.userData.initialZ + scrollFactor * (index % 5);
+                }
+            });
+
+            // Smooth camera movement with mouse
+            camera.position.x += (mouseX * 3 - camera.position.x) * 0.03;
+            camera.position.y += (mouseY * 3 - camera.position.y) * 0.03;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        // Initialize 3D scene
+        init3D();
+    </script>
+</body>
+
+</html>
